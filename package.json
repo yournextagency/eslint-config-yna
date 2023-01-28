@@ -1,0 +1,30 @@
+{
+  "name": "@yournextagency/eslint-config-yna",
+  "version": "1.0.0",
+  "description": "Yournextagency JS ESLint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yournextagency/eslint-config-yna.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Yournextagency.com | https://yournextagency.com | hello@yournextagency.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yournextagency/eslint-config-yna/issues"
+  },
+  "homepage": "https://github.com/yournextagency/eslint-config-yna#readme",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
