@@ -6,7 +6,12 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    './rules',
+    './rules/arrow-functions',
+    './rules/functions',
+    './rules/general',
+    './rules/references',
+    './rules/strings',
+    './rules/whitespace',
   ],
   parserOptions: {
     ecmaVersion: 2020,

@@ -2,21 +2,23 @@ const { ESLint } = require('eslint');
 import { assert, describe, it } from 'vitest';
 
 (async function test() {
-  // 1. Create an instance.
   const eslint = new ESLint();
 
-  // 2. Lint files
-  const results = await eslint.lintFiles(['./tests/index.js']);
+  const errorResults = await eslint.lintFiles(['./tests/errors/*.js']);
+  const warningResults = await eslint.lintFiles(['./tests/warnings/*.js']);
 
-  const errorsCount = results[0].errorCount;
-  const warningsCount = results[0].warningCount;
+  const expectedErrorCount = errorResults.length;
+  const errorsCount = errorResults.reduce((c, res) => c + res.errorCount, 0);
+
+  const expectedWarningsCount = warningResults.length;
+  const warningsCount = warningResults.reduce((c, res) => c + res.warningCount, 0);
 
   describe('ESLint Check', () => {
-    it('has 11 errors', () => {
-      assert.equal(errorsCount, 11);
+    it(`has ${expectedErrorCount} errors`, () => {
+      assert.equal(errorsCount, expectedErrorCount);
     });
-    it('has 1 warnings', () => {
-      assert.equal(warningsCount, 1);
+    it(`has ${expectedWarningsCount} warnings`, () => {
+      assert.equal(warningsCount, expectedWarningsCount);
     });
   });
 })();
