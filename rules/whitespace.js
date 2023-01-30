@@ -1,5 +1,10 @@
 module.exports = {
   rules: {
+    // https://eslint.org/docs/latest/rules/indent
+    'indent': ['error', 2, {
+      'SwitchCase': 1,
+    }],
+
     // https://eslint.org/docs/latest/rules/no-trailing-spaces
     'no-trailing-spaces': 'error',
 
@@ -8,9 +13,6 @@ module.exports = {
 
     // https://eslint.org/docs/latest/rules/eol-last
     'eol-last': ['error', 'always'],
-
-    // https://eslint.org/docs/latest/rules/indent
-    'indent': ['error', 2],
 
     // https://eslint.org/docs/latest/rules/space-before-blocks
     'space-before-blocks': ['error', 'always'],
@@ -61,5 +63,11 @@ module.exports = {
 
     // https://eslint.org/docs/latest/rules/key-spacing
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+
+    // https://eslint.org/docs/latest/rules/generator-star-spacing
+    'generator-star-spacing': ['error', { before: false, after: true }],
+
+    // https://eslint.org/docs/latest/rules/operator-linebreak
+    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
   },
 };

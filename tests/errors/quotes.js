@@ -1,2 +1,5 @@
-// e5: quotes
+// Bad
 "";
+
+// Good
+'';

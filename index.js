@@ -9,9 +9,14 @@ module.exports = {
     './rules/arrow-functions',
     './rules/functions',
     './rules/general',
-    './rules/references',
+    './rules/modules',
     './rules/strings',
+    './rules/style',
+    './rules/variables',
     './rules/whitespace',
+  ],
+  plugins: [
+    'import',
   ],
   parserOptions: {
     ecmaVersion: 2020,

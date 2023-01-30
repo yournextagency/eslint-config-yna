@@ -17,5 +17,8 @@ module.exports = {
 
     // https://eslint.org/docs/latest/rules/no-debugger
     'no-debugger': 'warn',
+
+    // https://eslint.org/docs/rules/no-case-declarations
+    'no-case-declarations': 'error',
   },
 };
