@@ -1,7 +1,7 @@
 const fooBarBaz = [
-  'foo',
-  'bar',
-  'baz'
+  'foo'
+  , 'bar'
+  , 'baz',
 ];
 
 export default fooBarBaz;

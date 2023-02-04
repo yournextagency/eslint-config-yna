@@ -20,5 +20,8 @@ module.exports = {
 
     // https://eslint.org/docs/rules/no-case-declarations
     'no-case-declarations': 'error',
+
+    // https://eslint.org/docs/latest/rules/no-new-wrappers
+    'no-new-wrappers': 'error',
   },
 };
