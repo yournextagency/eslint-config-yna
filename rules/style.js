@@ -48,5 +48,49 @@ module.exports = {
         message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
+
+    // https://eslint.org/docs/rules/nonblock-statement-body-position
+    'nonblock-statement-body-position': ['error', 'beside', { overrides: {} }],
+
+    // https://eslint.org/docs/latest/rules/brace-style
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+
+    // https://eslint.org/docs/latest/rules/no-else-return
+    'no-else-return': ['error', { allowElseIf: false }],
+
+    // https://eslint.org/docs/latest/rules/spaced-comment
+    'spaced-comment': ['error', 'always', {
+      line: {
+        exceptions: ['-', '+'],
+        // space here to support sprockets directives, slash for TS /// comments
+        markers: ['=', '!', '/'],
+      },
+      block: {
+        exceptions: ['-', '+'],
+        // space here to support sprockets directives and flow comment types
+        markers: ['=', '!', ':', '::'],
+        balanced: true,
+      },
+    }],
+
+    // https://eslint.org/docs/rules/comma-style
+    'comma-style': ['error', 'last', {
+      exceptions: {
+        ArrayExpression: false,
+        ArrayPattern: false,
+        ArrowFunctionExpression: false,
+        CallExpression: false,
+        FunctionDeclaration: false,
+        FunctionExpression: false,
+        ImportDeclaration: false,
+        ObjectExpression: false,
+        ObjectPattern: false,
+        VariableDeclaration: false,
+        NewExpression: false,
+      },
+    }],
+
+    // https://eslint.org/docs/latest/rules/camelcase
+    'camelcase': ['error', { properties: 'never', ignoreDestructuring: false }],
   },
 };
