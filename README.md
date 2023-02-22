@@ -6,7 +6,7 @@ Yournextagency.com base ESLint configuration
 
 ### Install package
 ```
-npm install yournextagency/eslint-config-yna eslint-plugin-import --save-dev
+npm install git://github.com/yournextagency/eslint-config-yna.git#1.0.0 --save-dev
 ```
 
 ### Extend ESLint config
